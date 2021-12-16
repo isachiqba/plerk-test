@@ -1,0 +1,13 @@
+nav:
+  - Instructions: instructions.md
+  - Solution: README.md
+
+site_name: "Django Backend Entrevista"
+
+theme:
+  favicon: assets/logo.png
+  language: en
+  logo: assets/logo.png
+  name: material
+  palette:
+    primary: green

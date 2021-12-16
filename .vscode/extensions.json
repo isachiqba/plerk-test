@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "alefragnani.bookmarks",
+    "dlech.chmod",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ryu1kn.text-marker",
+    "sleistner.vscode-fileutils",
+    "tamasfe.even-better-toml",
+    "tyriar.sort-lines",
+    "wmaurer.change-case",
+    "xyz.local-history",
+  ],
+  "unwantedRecommendations": []
+}
