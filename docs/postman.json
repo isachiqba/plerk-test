@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "576f7d75-2146-437b-b9f0-06626c1bb0d5",
+		"name": "Plerk - Django - Backend - Entrevista",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API - root",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API - summary",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/summary",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"summary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API - company-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/company",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API - company-detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/company/babaebf8-0408-49de-a0d5-7af1ff6e8a5f",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"company",
+						"babaebf8-0408-49de-a0d5-7af1ff6e8a5f"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://plerk-test.nazg.network:8000"
+		}
+	]
+}
