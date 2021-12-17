@@ -8,7 +8,10 @@ AUTH_PASSWORD_VALIDATORS = []
 DATABASES = {
   "default": {
     "ENGINE": "django.db.backends.postgresql",
-    "NAME": "plerk.service.transaction.stats",
+    "NAME": environ.get("POSTGRES_DB", "plerk.service.transaction.stats"),
+    "USER": environ.get("POSTGRES_USER"),
+    "PASSWORD": environ.get("POSTGRES_PASSWORD"),
+    "HOST": environ.get("POSTGRES_HOST", "localhost"),
   }
 }
 

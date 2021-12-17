@@ -1,0 +1,38 @@
+networks:
+  default:
+    name: plerk
+
+services:
+
+  app:
+    image: python:3.10
+    container_name: plerk-app
+    volumes:
+      - app--opt:/opt
+    working_dir: /opt
+    ports:
+      - "8000:8000"
+    command: gunicorn --bind=0.0.0.0 plerk.service.transaction.stats.wsgi
+    environment:
+      - DJANGO_SETTINGS_MODULE=plerk.service.transaction.stats.conf
+      - PATH=/opt/venv/bin:$PATH
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+
+  postgres:
+    image: postgres:14.1
+    container_name: plerk-postgres
+    volumes:
+      - postgres--var-lib-postgresql-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=plerk.service.transaction.stats
+      - POSTGRES_PASSWORD=postgres
+
+version: "3.9"
+
+volumes:
+  app--opt:
+    name: plerk--app--opt
+  postgres--var-lib-postgresql-data:
+    name: plerk--postgres--var-lib-postgresql-data
